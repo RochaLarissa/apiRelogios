@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "47143a45-928a-4ae6-9de6-894ed50cd47f",
+		"name": "API Relogios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21083470"
+	},
+	"item": [
+		{
+			"name": "Novo Relogio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Relógio de Pulso Masculino SANDA Esporte Militar A Prova D'água Multi-Função Display Duplo (C2)\",\r\n    \"detalhes\": \"MARCA: Sanda NÚMERO DA PEÇA: 599-M1 CRISTAL: Acrílico, Vidro, Plástico TIPO DE TELA: Digital analógico MATERIAL DA PULSEIRA: Borracha\",\r\n    \"imgUrl\": \"https://m.media-amazon.com/images/I/71+RHLGUYHS._AC_SL1300_.jpg\",\r\n    \"preco\": 299.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/relogios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"relogios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjU3NjU2NDMxfQ.8mEPbGKujg1WZK_b3nhWiOeFgS00kngwHZuxemd3Lws",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/relogios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"relogios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar relogio por id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjU3NjU2NDMxfQ.8mEPbGKujg1WZK_b3nhWiOeFgS00kngwHZuxemd3Lws",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/relogios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"relogios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar relogio",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n   \"id\": 1,\r\n    \"titulo\": \"Relógio de Pulso Masculino SANDA Esporte Militar A Prova D'água Multi-Função Display Duplo (C2)\",\r\n    \"detalhes\": \"MARCA: Sanda NÚMERO DA PEÇA: 599-M1 CRISTAL: Acrílico, Vidro, Plástico TIPO DE TELA: Digital analógico MATERIAL DA PULSEIRA: Borracha\",\r\n    \"imgUrl\": \"https://m.media-amazon.com/images/I/71+RHLGUYHS._AC_SL1300_.jpg\",\r\n    \"preco\": 2299.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/relogios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"relogios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar relogio",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/relogios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"relogios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
